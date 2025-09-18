@@ -40,7 +40,16 @@ function(input, output, session) {
   output$data_table <- renderDT({
     datatable(
       filtered_data(),
-      options = list(pageLength = 10, autoWidth = TRUE),
+      extensions = 'Buttons',
+      
+      options = list(
+        # NEW: 'dom' positions the buttons ('B') in the table's layout
+        dom = 'Bfrtip',
+        # NEW: Define which buttons to show
+        buttons = c('copy', 'excel'),
+        pageLength = 10,
+        autoWidth = TRUE
+      ),
       rownames = FALSE,
       class = 'cell-border stripe'
     )

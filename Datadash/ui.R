@@ -6,7 +6,7 @@
 fluidPage(
   
   # App title
-  titlePanel("Social Group Indicators Dashboard"),
+  titlePanel("NPMU Data Dashboard",windowTitle = "Datadash"),
   
   # Sidebar layout with input and output definitions
   sidebarLayout(
